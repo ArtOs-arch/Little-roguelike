@@ -10,6 +10,7 @@ O objetivo não é apenas criar um jogo divertido, mas também entender conceito
 - os fundamentos da linguagem
 - o uso do git e github
 - raylib
+
 Conforme eu aprender coisas novas, partes do código serão melhoradas ou reescritas.
 
 ---
