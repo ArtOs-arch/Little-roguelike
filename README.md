@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Assents/banner.png" alt="Little Roguelike" width="800">
+  <img src="Assets/banner.png" alt="Little Roguelike" width="800">
 </p>
 
 <h1 align="center">Little Roguelike</h1>
