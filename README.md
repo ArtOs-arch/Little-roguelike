@@ -5,7 +5,7 @@
 <h1 align="center">Little Roguelike</h1>
 
 <p align="center">
-  Um roguelike desenvolvido em C enquanto aprendo programação.
+  Um roguelike desenvolvido em C enquanto aprendo programação (sim a logo é inspirada em undertale).
 </p>
 
 ---
