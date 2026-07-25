@@ -1,3 +1,15 @@
+<p align="center">
+  <img src="assets/banner.png" alt="Little Roguelike" width="700">
+</p>
+
+<h1 align="center">Little Roguelike</h1>
+
+<p align="center">
+  Um roguelike desenvolvido em C enquanto aprendo programação.
+</p>
+
+---
+
 # Roguelike em C
 
 > Um roguelike desenvolvido em C com o objetivo de aprender programação e construir um projeto do zero.
