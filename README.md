@@ -5,21 +5,21 @@
 <h1 align="center">Little Roguelike</h1>
 
 <p align="center">
-  Um roguelike desenvolvido em C e lua enquanto eu e meu irmao aprendemos programação (sim a logo é inspirada em undertale).
+  Um roguelike desenvolvido em C enquanto eu desenvolvo meu conhecimento sobre programação (sim a logo é inspirada em undertale).
 </p>
 
 ---
 
-# Roguelike em C e Lua
+# Roguelike em C 
 
-> Um roguelike desenvolvido em C e lua com o objetivo de aprender programação e construir um projeto do zero.
+> Um roguelike desenvolvido em C com o objetivo de aprender programação e construir um projeto do zero.
 
 ## Sobre
 
 Esse projeto está sendo desenvolvido enquanto aprendo a linguagem C e meu irmao Lua.
 
 O objetivo não é apenas criar um jogo divertido, mas também entender conceitos importantes como:
-- os fundamentos de ambas linguagens
+- os fundamentos do C na pratica
 - o uso do git e github
 - raylib
 
@@ -44,14 +44,13 @@ Conforme eu aprender coisas novas, partes do código serão melhoradas ou reescr
 
 ## Objetivos
 
-- Aprender C e Lua na prática.
+- Aprender C na prática.
 - Escrever código cada vez mais organizado.
-- Evoluir o projeto conforme ganhamos experiência.
+- Evoluir o projeto conforme ganho experiência.
 ## poder mostar para as pessoas o quão interessante e divertido pode ser a programação
 ---
 
 ## Tecnologias
-- linguagem Lua
 - Linguagem C
 - GCC
 - Git
@@ -63,7 +62,7 @@ Conforme eu aprender coisas novas, partes do código serão melhoradas ou reescr
 
 O projeto ainda está em desenvolvimento.
 
-Cada commit representa um passo na minha evolução um amante da programação.
+Cada commit representa um passo na minha evolução como um amante da programação.
 
 ---
 
