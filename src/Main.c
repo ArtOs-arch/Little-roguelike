@@ -6,6 +6,7 @@
 #include "Rooms.h"
 
 // Definição das variáveis globais (único lugar!)
+int run = 0;
 int level = 1;
 int life = 100;
 int defense = 5;

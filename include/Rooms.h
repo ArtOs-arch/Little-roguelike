@@ -7,6 +7,7 @@ extern int life;
 extern int attack;
 extern int potions;
 extern int defense;
+extern int run;
 // Protótipos das funções das salas
 void Room1();
 void Room2();

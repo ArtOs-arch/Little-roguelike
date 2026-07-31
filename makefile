@@ -1,34 +1,31 @@
-CC      = gcc
-CFLAGS  = -Wall -I./include
-LIBS    = -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
+CC = gcc
 
-SRCS = $(wildcard src/*.c) \
-       $(wildcard src/salas/*.c)
-
-OBJS = $(SRCS:src/%.c=src/build/%.o)
+CFLAGS = -Wall -I./include
+LIBS = -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
 
 TARGET = rpg
 
+# Encontra TODOS os .c dentro de src
+SRCS := $(shell find src -type f -name "*.c")
+
+# Gera os .o mantendo a estrutura de pastas
+OBJS := $(patsubst src/%.c,build/%.o,$(SRCS))
 
 all: $(TARGET)
-	@echo "Compilação concluída!"
-
 
 $(TARGET): $(OBJS)
 	$(CC) $(OBJS) $(LIBS) -o $(TARGET)
 
-
-src/build/%.o: src/%.c
-	mkdir -p $(dir $@)
+build/%.o: src/%.c
+	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
-
-
-clean:
-	rm -rf src/build/*.o $(TARGET)
-
 
 run: all
 	./$(TARGET)
 
+clean:
+	rm -rf build $(TARGET)
 
-.PHONY: all clean run
+rebuild: clean all
+
+.PHONY: all clean run rebuild
