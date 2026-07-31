@@ -5,7 +5,7 @@
 <h1 align="center">Little Roguelike</h1>
 
 <p align="center">
-  Um roguelike desenvolvido em C enquanto eu desenvolvo meu conhecimento sobre programação (sim a logo é inspirada em undertale).
+  Um roguelike desenvolvido em C enquanto eu desenvolvo meu conhecimento sobre programação.
 </p>
 
 ---
@@ -16,7 +16,8 @@
 
 ## Sobre
 
-Esse projeto está sendo desenvolvido enquanto aprendo a linguagem C e meu irmao Lua.
+Esse projeto está sendo desenvolvido enquanto aprendo a linguagem C.
+No momento esse é só um esqueleto do meu pequeno projeto pessoal.
 
 O objetivo não é apenas criar um jogo divertido, mas também entender conceitos importantes como:
 - os fundamentos do C na pratica
@@ -33,11 +34,9 @@ Conforme eu aprender coisas novas, partes do código serão melhoradas ou reescr
 - [ ] Sistema de atributos
 - [ ] Combate
 - [ ] Inventário
-- [ ] NPCs
 - [ ] Salas aleatórias
 - [ ] Itens e equipamentos
 - [ ] Sistema de níveis
-- [ ] Save/Load
 
 ---
 
