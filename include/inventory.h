@@ -2,10 +2,10 @@
 #define INVENTORY_H
 
 typedef struct {
- int Slot_1;
- int Slot_2;
- int Slot_3;
- int Slot_4;
+ char Slot_1[30];
+ char Slot_2[30];
+ char Slot_3[30];
+ char Slot_4[30];
  int pocoes;
 } Inv;
 

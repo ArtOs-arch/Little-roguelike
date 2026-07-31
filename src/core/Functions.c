@@ -34,3 +34,7 @@ void runF(){
     printf("Voce fugiu! Que vergonha...\n");
             run = 1;
 }
+
+void dropF(){
+    
+}
