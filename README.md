@@ -47,7 +47,7 @@ Conforme eu aprender coisas novas, partes do código serão melhoradas ou reescr
 - Aprender C na prática.
 - Escrever código cada vez mais organizado.
 - Evoluir o projeto conforme ganho experiência.
-## poder mostar para as pessoas o quão interessante e divertido pode ser a programação
+
 ---
 
 ## Tecnologias
