@@ -17,6 +17,7 @@
 ## Sobre
 
 Esse projeto está sendo desenvolvido enquanto aprendo a linguagem C.
+
 No momento esse é só um esqueleto do meu pequeno projeto pessoal.
 
 O objetivo não é apenas criar um jogo divertido, mas também entender conceitos importantes como:
