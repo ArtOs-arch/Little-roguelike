@@ -1,6 +1,8 @@
 #ifndef ROOMS_H
 #define ROOMS_H
 
+
+
 // Variáveis globais (compartilhadas)
 extern int level;
 extern int life;
@@ -18,4 +20,5 @@ void Room5();
 // Prototipo das funçoes
 void aliveF();
 void potionF();
+void runF();
 #endif

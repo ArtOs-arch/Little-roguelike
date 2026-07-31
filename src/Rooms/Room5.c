@@ -73,8 +73,7 @@ void Room5()
             break;
 
         case 3:
-            printf("Voce fugiu! eu particulamente te entendo um pouco\n");
-            fugir = 1;
+           runF();
             break;
 
         default:

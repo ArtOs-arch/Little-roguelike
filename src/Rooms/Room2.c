@@ -72,8 +72,7 @@ void Room2()
             break;
 
         case 3:
-            printf("Voce fugiu! Que vergonha... era so um anao\n");
-            run = 1;
+            runF();
             break;
 
         default:
