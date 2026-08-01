@@ -5,10 +5,10 @@
 // =============================================
 
 // Herói
-Player Player1 = {"", 100, 100, 0, 5, 1, 0, 0};
-
+Player Player1 = {"", 100, 100, 0, 5, 1, 0,};
+Inventory Inv = {{"","","","",""}, 3};
 // Inimigos
-Enemy Rat = {"BigRat", 1, 20, 3, 0, 2, 5,
+Enemy Rat = {"Rato", 1, 20, 3, 0, 2, 5,
 {
     "Chave_enferrujada",
     "Maca",
@@ -24,7 +24,7 @@ Enemy Slime = {"Slime", 2, 30, 4, 1, 4, 8,
     "Escudo_de_Madeira"
 }};
 
-Enemy Globin = {"Globin", 4, 45, 6, 3, 6, 12,
+Enemy Goblin = {"Globin", 4, 45, 6, 3, 6, 12,
 {
     "Adaga_Goblin",
     "Capuz_Goblin",
@@ -32,7 +32,7 @@ Enemy Globin = {"Globin", 4, 45, 6, 3, 6, 12,
     "Pao"
 }};
 
-Enemy Spider = {"Spider", 6, 60, 8, 3, 18, 9,
+Enemy Spider = {"Aranha", 6, 60, 8, 3, 18, 9,
 {
     "Antidoto",
     "Pocao_Media",
@@ -40,7 +40,7 @@ Enemy Spider = {"Spider", 6, 60, 8, 3, 18, 9,
     "Bomba_de_Fumaca"
 }};
 
-Enemy Skeleton = {"Skeleton", 8, 80, 10, 5, 12, 25,
+Enemy Skeleton = {"Squeleto", 8, 80, 10, 5, 12, 25,
 {
     "Espada_Enferrujada",
     "Escudo_Velho",

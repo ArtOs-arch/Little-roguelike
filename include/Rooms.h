@@ -1,6 +1,6 @@
 #ifndef ROOMS_H
 #define ROOMS_H
-
+#include "global.h"
 // Protótipos das funções das salas
 void Room1();
 void Room2();
@@ -12,4 +12,5 @@ void Room5();
 void aliveF();
 void potionF();
 void runF();
+void dropF(Enemy inimigo);
 #endif

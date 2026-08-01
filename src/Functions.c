@@ -9,16 +9,16 @@ extern int run;
 // o F na frente dos nomes significa FUNÇÃO
 void potionF()
 {
-    if (Player1.potions > 0)
+    if (Inv.potions > 0)
     {
         Player1.life = Player1.life + 15;
-        Player1.potions = Player1.potions - 1;
+        Inv.potions = Inv.potions - 1;
         if (Player1.life > 100)
         {
             Player1.life = 100;
         }
         printf("Voce tomou uma poçao! (+15 de life)\n");
-        printf("Poções restantes: %d\n", Player1.potions);
+        printf("Poções restantes: %d\n", Inv.potions);
     }
     else
     {
@@ -67,7 +67,7 @@ void dropF(Enemy inimigo)
     }
     else
     {
-        printf("nenhum drop.");
+        printf("nenhum drop.\n");
         Drop = 0;
     }
 
@@ -76,17 +76,17 @@ void dropF(Enemy inimigo)
         int escolha;
         printf("1-coletar\n");
 
-        printf("2-largar");
+        printf("2-largar\n");
 
         printf("voce deseja coletar ou largar:\n");
         scanf("%d", &escolha);
         if (escolha == 1)
         {
-            printf("Voce pega o item.");
+            printf("Voce pega o item.\n");
         }
         else
         {
-            printf("Voce larga o item.");
+            printf("Voce larga o item.\n");
         }
     }
 }

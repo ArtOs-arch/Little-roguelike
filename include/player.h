@@ -3,13 +3,13 @@
 
 typedef struct
 {
-   char name[30];
-   int life;
-   int max_life;
-   int defense;
-   int attack;
-   int level;
-   int potions;
-   int exp;
+   char name[30];  //1
+   int life;      // 2
+   int max_life; // 3
+   int defense; // 4
+   int attack; // 5
+   int level; // 6
+   int exp;  // 7
 } Player;
+
 #endif
