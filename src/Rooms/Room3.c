@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Rooms.h"
+#include "player.h"
+#include "enemy.h"
 
 void Room3()
 {
-    int npc_life = 35;
-    int npc_damage = 10;
     int action;
     int run = 0; // 0 = continua, 1 = fugiu
 
-    printf("----- SALA 1 -----\n");
-    printf("Um npc apareceu do nada ! (life: 35)\n");
+    printf("----- SALA 3 -----\n");
+    printf("Um Globin apareceu do nada! (life: 45)\n");
 
-    while (life > 0 && npc_life > 0 && run == 0)
+    while (Player1.life > 0 && Globin.life > 0 && run == 0)
     {
-        printf("\nSua life: %d | life do npc: %d\n", life, npc_life);
+        printf("\nSua life: %d | life do Globin: %d\n", Player1.life, Globin.life);
         printf("O que voce faz?\n");
         printf("1 - Atacar\n");
         printf("2 - Usar poçao\n");
@@ -25,22 +25,22 @@ void Room3()
         switch (action)
         {
         case 1:
-            printf("Voce refuta o npc causando %d de damage!\n", attack);
-            npc_life = npc_life - attack;
+            printf("Voce refuta o Globin causando %d de damage!\n",Player1.attack);
+            Globin.life = Globin.life - Player1.attack;
 
-            if (npc_life > 0)
+            if (Globin.life > 0)
             {
-                printf("O npc usa seu attack 'Só mais uma feature...' causando %d de damage!\n", npc_damage);
-                life = (life + defense) - npc_damage;
+                printf("O Globin usa seu attack 'Só mais uma feature...' causando %d de damage!\n", Globin.attack);
+                Player1.life = (Player1.life + Player1.defense) - Globin.attack;
             }
             else
             {
-                printf("O npc foi derrotado!\n");
+                printf("O Globin foi derrotado!\n");
                 int drop = rand() % 100 + 1;
 
                 if (drop % 2 == 0)
                 { // par = drop bom
-                    printf("O npc dropou um tenis mecanico!\n");
+                    printf("O Globin dropou um tenis mecanico!\n");
                     int escolha;
                     printf("1-coletar\n");
 
@@ -51,7 +51,7 @@ void Room3()
 
                     if (escolha == 1)
                     {
-                        life = life + 13;
+                        Player1.life = Player1.life + 13;
                         printf("Voce coletou o tenis! + 10 de life.\n");
                     }
                     else
@@ -61,7 +61,7 @@ void Room3()
                 }
                 else
                 { // ímpar = drop fraco
-                    printf("O npc dropou uma meia molhada... inútil.\n");
+                    printf("O Globin dropou uma meia molhada... inútil.\n");
                 }
             }
             break;
@@ -79,8 +79,5 @@ void Room3()
         }
     }
 
-    if (life <= 0) 
-    {
-        printf("\nVOCE MORREU! Game Over...\n");
-    }
+    aliveF();
 }

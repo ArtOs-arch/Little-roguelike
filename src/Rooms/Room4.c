@@ -1,19 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Rooms.h"
+#include "player.h"
+#include "enemy.h"
 
-void Room4() {
-    int vimUser_life = 60;
-    int vimUser_damage = 20;
+void Room4()
+{
     int action;
     int run = 0; // 0 = continua, 1 = fugiu
 
-    printf("----- SALA 1 -----\n");
-    printf("Um vimUser spawnou! (life: 60)\n");
+    printf("----- SALA 4 -----\n");
+    printf("Um Spider spawnou! (life: 60)\n");
 
-    while (life > 0 && vimUser_life > 0 && run == 0)
+    while (Player1.life > 0 && Spider.life > 0 && run == 0)
     {
-        printf("\nSua life: %d | life do vimUser: %d\n", life, vimUser_life);
+        printf("\nSua life: %d | life do Spider: %d\n", Player1.life, Spider.life);
         printf("O que voce faz?\n");
         printf("1 - Atacar\n");
         printf("2 - Usar poçao\n");
@@ -24,23 +25,23 @@ void Room4() {
         switch (action)
         {
         case 1:
-            printf("Voce ataca o vimUser causando %d de damage!\n", attack);
-         vimUser_life = vimUser_life - attack;
+            printf("Voce ataca o Spider causando %d de damage!\n", Player1.attack);
+            Spider.life = Spider.life - Player1.attack;
 
-            if  (vimUser_life > 0)
+            if (Spider.life > 0)
             {
-                printf("O vimUser usao attack ':wq' causando %d de damage!\n", vimUser_damage);
-                life = (life + defense) - vimUser_damage;
+                printf("O Spider usao attack ':wq' causando %d de damage!\n", Spider.attack);
+                Player1.life = (Player1.life + Player1.defense) - Spider.attack;
             }
             else
             {
-                printf("O vimUser foi derrotado!\n");
+                printf("O Spider foi derrotado!\n");
                 printf("isso que voce fez foi surreal.\n");
                 int drop = rand() % 100 + 1;
                 int escolha;
                 if (drop % 2 == 0)
                 { // par = drop bom
-                    printf("O vimUser dropou O NEOVIM!\n");
+                    printf("O Spider dropou O NEOVIM!\n");
 
                     printf("1-coletar\n");
 
@@ -51,7 +52,7 @@ void Room4() {
 
                     if (escolha == 1)
                     {
-                        attack = attack + 10;
+                        Player1.attack = Player1.attack + 10;
                         printf("Voce coletou o NEOVIM! + 5 de attack.\n");
                     }
                     else
@@ -61,7 +62,7 @@ void Room4() {
                 }
                 else
                 { // ímpar = drop fraco
-                    printf("O vimUser dropou um Emacs... Nada util.\n");
+                    printf("O Spider dropou um Emacs... Nada util.\n");
                 }
             }
             break;
@@ -79,8 +80,5 @@ void Room4() {
         }
     }
 
-    if (life <= 0)
-    {
-        printf("\nVOCE MORREU! Game Over...\n");
-    }
+    aliveF();
 }

@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Rooms.h"
+#include "player.h"
+#include "enemy.h"
 
 void Room2()
 {
-    int fiscal_life = 35;
-    int fiscal_damage = 10;
     int action;
     int run = 0; // 0 = continua, 1 = fugiu
 
     printf("----- SALA 2 -----\n");
     printf("Um Fiscal spawnou! (life: 25)\n");
 
-    while (life > 0 && fiscal_life > 0 && run == 0)
+    while (Player1.life > 0 && Slime.life > 0 && run == 0)
     {
-        printf("\nSua life: %d | life do Fiscal: %d\n", life, fiscal_life);
+        printf("\nSua life: %d | life do Fiscal: %d\n", Player1.life, Slime.life);
         printf("O que voce faz?\n");
         printf("1 - Atacar\n");
         printf("2 - Usar poçao\n");
@@ -25,13 +25,13 @@ void Room2()
         switch (action)
         {
         case 1:
-            printf("Voce ataca o Fiscal causando %d de damage!\n", attack);
-            fiscal_life = fiscal_life - attack;
+            printf("Voce ataca o Fiscal causando %d de damage!\n", Player1.attack);
+            Slime.life = Slime.life - Player1.attack;
 
-            if (fiscal_life > 0)
+            if (Slime.life > 0)
             {
-                printf("O Fiscal usa seu attack 'Declarou a variável?' causando %d de damage!\n", fiscal_damage);
-                life = (life + defense) - fiscal_damage;
+                printf("O Fiscal usa seu attack 'Declarou a variável?' causando %d de damage!\n", Slime.damage);
+                Player1.life = (Player1.life + Player1.defense) - Slime.damage;
             }
             else
             {
@@ -52,7 +52,7 @@ void Room2()
 
                     if (escolha == 1)
                     {
-                        life = life + 10;
+                        Player1.life = Player1.life + 10;
                         printf("Voce coletou o compilador! + 10 de life!.\n");
                     }
                     else
@@ -80,8 +80,5 @@ void Room2()
         }
     }
 
-    if (life <= 0)
-    {
-        printf("\nVOCE MORREU! Game Over...\n");
-    }
+    aliveF();
 }

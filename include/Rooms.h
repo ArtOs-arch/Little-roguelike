@@ -4,12 +4,9 @@
 
 
 // Variáveis globais (compartilhadas)
-extern int level;
-extern int life;
-extern int attack;
-extern int potions;
-extern int defense;
 extern int run;
+extern int drop;
+
 // Protótipos das funções das salas
 void Room1();
 void Room2();

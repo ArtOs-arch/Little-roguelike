@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Rooms.h"
+#include "player.h"
+#include "enemy.h"
 
 void Room5()
 {
-    int Peidax_life = 70;
-    int Peidax_damage = 30;
     int açao;
     int fugir = 0; // 0 = continua, 1 = fugiu
 
-    printf("----- SALA 1 -----\n");
-    printf("Um PEIDAX spawnou, CUIDADO TOTAL! (life: 70)\n");
+    printf("----- SALA 5 -----\n");
+    printf("Um Esqueleto spawnou, CUIDADO! (life: 70)\n");
 
-    while (life > 0 && Peidax_life > 0 && fugir == 0)
+    while (Player1.life > 0 && Skeleton.life > 0 && fugir == 0)
     {
-        printf("\nSua life: %d | life do Peidax: %d\n", life, Peidax_life);
+        printf("\nSua life: %d | life do Peidax: %d\n", Player1.life, Skeleton.life);
         printf("O que voce faz?\n");
         printf("1 - Atacar\n");
         printf("2 - Usar poçao\n");
@@ -25,13 +25,13 @@ void Room5()
         switch (açao)
         {
         case 1:
-            printf("Voce ataca o Peidax causando %d de damage!\n", attack);
-            Peidax_life = Peidax_life - attack;
+            printf("Voce ataca o Peidax causando %d de damage!\n", Player1.attack);
+            Skeleton.life = Skeleton.life - Player1.attack;
 
-            if (Peidax_life > 0)
+            if (Skeleton.life > 0)
             {
-                printf("O Peidax te da um ratio causando %d de damage!\n", Peidax_damage);
-                life = (life + defense) - Peidax_damage;
+                printf("O Peidax te da um ratio causando %d de damage!\n", Skeleton.attack);
+                Player1.life = (Player1.life + Player1.defense) - Skeleton.attack;
             }
             else
             {
@@ -52,8 +52,8 @@ void Room5()
 
                     if (escolha == 1)
                     {
-                        attack = attack + 30;
-                        potions = potions + 10;
+                        Player1.attack = Player1.attack + 30;
+                        Player1.potions = Player1.potions + 10;
                         printf("Voce coletou o batatinha! + 30 de attack e umas potionszinhas.\n");
                     }
                     else
@@ -81,8 +81,5 @@ void Room5()
         }
     }
 
-    if (life <= 0)
-    {
-        printf("\nVOCE MORREU! Game Over...\n");
-    }
+    aliveF();
 }

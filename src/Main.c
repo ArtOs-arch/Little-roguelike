@@ -4,15 +4,12 @@
 #include <stdlib.h>
 #include <time.h>
 #include "Rooms.h"
+#include "player.h"
 
-// Definição das variáveis globais (único lugar!)
+// Definição das variáveis globais
 int run = 0;
-int level = 1;
-int life = 100;
-int defense = 5;
-int attack = 10;
-int potions = 3;
 int vivo = 1; // 0 = morto 1 = vivo
+int drop;
 
 int main()
 {
@@ -31,6 +28,9 @@ int main()
         switch (opcao)
         {
         case 1:
+            printf("Como devo te chamar?");
+            scanf("%s",Player1.name);
+
             printf("Entrando...\n");
             printf("Escolha uma sala (1-5): ");
             scanf("%d", &rooms);
@@ -59,9 +59,9 @@ int main()
 
         case 2:
             printf("\n--- STATUS ---\n");
-            printf("life: %d\n", life);
-            printf("attack: %d\n", attack);
-            printf("Poções: %d\n", potions);
+            printf("life: %d\n", Player1.life);
+            printf("attack: %d\n", Player1.attack);
+            printf("Poções: %d\n", Player1.potions);
             break;
 
         case 3:
