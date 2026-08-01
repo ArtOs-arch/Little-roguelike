@@ -5,11 +5,9 @@
 #include <time.h>
 #include "Rooms.h"
 #include "player.h"
+#include "global.h"
 
 // Definição das variáveis globais
-int run = 0;
-int vivo = 1; // 0 = morto 1 = vivo
-int drop;
 
 int main()
 {
@@ -28,7 +26,7 @@ int main()
         switch (opcao)
         {
         case 1:
-            printf("Como devo te chamar?");
+            printf("Como devo te chamar? ");
             scanf("%s",Player1.name);
 
             printf("Entrando...\n");

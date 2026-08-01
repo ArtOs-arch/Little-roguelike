@@ -1,12 +1,6 @@
 #ifndef ROOMS_H
 #define ROOMS_H
 
-
-
-// Variáveis globais (compartilhadas)
-extern int run;
-extern int drop;
-
 // Protótipos das funções das salas
 void Room1();
 void Room2();

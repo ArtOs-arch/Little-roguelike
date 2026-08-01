@@ -12,5 +12,4 @@ typedef struct
    int potions;
    int exp;
 } Player;
-Player Player1 = {100, 100, 0, 5, 1, 0, 0};
 #endif

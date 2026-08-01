@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Rooms.h"
-#include "player.h"
-#include "enemy.h"
+#include "global.h"
 
 void Room2()
 {
@@ -30,8 +29,8 @@ void Room2()
 
             if (Slime.life > 0)
             {
-                printf("O Fiscal usa seu attack 'Declarou a variável?' causando %d de damage!\n", Slime.damage);
-                Player1.life = (Player1.life + Player1.defense) - Slime.damage;
+                printf("O Fiscal usa seu attack 'Declarou a variável?' causando %d de damage!\n", Slime.attack);
+                Player1.life = (Player1.life + Player1.defense) - Slime.attack;
             }
             else
             {

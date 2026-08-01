@@ -3,23 +3,22 @@
 #include "player.h"
 #include "enemy.h"
 #include "Rooms.h"
-
-extern int potions;
-extern int life;
+#include <stdlib.h>
+#include "global.h"
 extern int run;
 // o F na frente dos nomes significa FUNÇÃO
 void potionF()
 {
-    if (potions > 0)
+    if (Player1.potions > 0)
     {
-        life = life + 15;
-        potions = potions - 1;
-        if (life > 100)
+        Player1.life = Player1.life + 15;
+        Player1.potions = Player1.potions - 1;
+        if (Player1.life > 100)
         {
-            life = 100;
+            Player1.life = 100;
         }
         printf("Voce tomou uma poçao! (+15 de life)\n");
-        printf("Poções restantes: %d\n", potions);
+        printf("Poções restantes: %d\n", Player1.potions);
     }
     else
     {
@@ -30,7 +29,7 @@ void potionF()
 // funçao do SE nao estiver vivo
 void aliveF()
 {
-    if (life <= 0)
+    if (Player1.life <= 0)
     {
         printf("Voce esta morto.");
     }
@@ -83,7 +82,7 @@ void dropF(Enemy inimigo)
         scanf("%d", &escolha);
         if (escolha == 1)
         {
-            prinf("Voce pega o item.");
+            printf("Voce pega o item.");
         }
         else
         {

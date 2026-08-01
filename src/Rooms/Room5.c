@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Rooms.h"
-#include "player.h"
-#include "enemy.h"
+#include "global.h"
 
 void Room5()
 {
