@@ -48,21 +48,25 @@ void dropF(Enemy inimigo)
     if (sorteio <= 20)
     {
         printf("%s dropou %s!\n", inimigo.name, inimigo.drop[0]);
+        Player1.exp = Player1.exp + inimigo.exp;
         Drop = 1;
     }
     else if (sorteio <= 40)
     {
         printf("%s dropou %s!\n", inimigo.name, inimigo.drop[1]);
+        Player1.exp = Player1.exp + inimigo.exp;
         Drop = 1;
     }
     else if (sorteio <= 60)
     {
         printf("%s dropou %s!\n", inimigo.name, inimigo.drop[2]);
+        Player1.exp = Player1.exp + inimigo.exp;
         Drop = 1;
     }
     else if (sorteio <= 80)
     {
         printf("%s dropou %s!\n", inimigo.name, inimigo.drop[3]);
+        Player1.exp = Player1.exp + inimigo.exp;
         Drop = 1;
     }
     else
@@ -88,5 +92,17 @@ void dropF(Enemy inimigo)
         {
             printf("Voce larga o item.\n");
         }
+    }
+}
+
+void levelF()
+{
+    if (Player1.exp >= 100)
+    {
+        Player1.level++;
+        Player1.max_life = Player1.max_life + 5;
+        Player1.attack = Player1.attack + 1;
+        Player1.defense = Player1.defense + 1;
+        Player1.exp = 0;
     }
 }
