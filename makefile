@@ -1,30 +1,36 @@
-CC = gcc
+CC      = gcc
+CFLAGS  = -Wall -Wextra -I./include
+LDFLAGS =
+LIBS    = -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
 
-CFLAGS = -Wall -I./include
-LIBS = -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
-
-TARGET = rpg
+TARGET  = rpg
+BUILD   = build
 
 # Encontra TODOS os .c dentro de src
-SRCS := $(shell find src -type f -name "*.c")
+SRCS := $(shell find src -type f -name '*.c')
 
 # Gera os .o mantendo a estrutura de pastas
-OBJS := $(patsubst src/%.c,build/%.o,$(SRCS))
+OBJS := $(patsubst src/%.c,$(BUILD)/%.o,$(SRCS))
+
+# Dependências de headers (opcional, mas recomendado)
+DEPS := $(OBJS:.o=.d)
 
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CC) $(OBJS) $(LIBS) -o $(TARGET)
+	$(CC) $(OBJS) $(LDFLAGS) $(LIBS) -o $@
 
-build/%.o: src/%.c
+$(BUILD)/%.o: src/%.c
 	@mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -MMD -MP -c $< -o $@
+
+-include $(DEPS)
 
 run: all
 	./$(TARGET)
 
 clean:
-	rm -rf build $(TARGET)
+	rm -rf $(BUILD) $(TARGET)
 
 rebuild: clean all
 

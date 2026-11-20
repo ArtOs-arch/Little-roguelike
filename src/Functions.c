@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include "global.h"
 extern int run;
+
 // o F na frente dos nomes significa FUNÇÃO
 void potionF()
 {
@@ -100,7 +101,7 @@ void levelF()
     if (Player1.exp >= 100)
     {
         Player1.level++;
-        Player1.max_life = Player1.max_life + 5;
+        Player1.max_life = Player1.max_life + 2;
         Player1.attack = Player1.attack + 1;
         Player1.defense = Player1.defense + 1;
         Player1.exp = 0;
