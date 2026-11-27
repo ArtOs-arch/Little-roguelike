@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "Rooms.h"
 #include "global.h"
-
+#include "title.h"
 void Room1()
 {
     int action;
@@ -10,7 +10,7 @@ void Room1()
 
     printf("----- SALA 1 -----\n");
     printf("Um rato enorme salta das sombras, exibindo seus dentes afiados!\n");
-
+    printf("%s", RAT_ART);
     while (Player1.life > 0 && Rat.life > 0 && run == 0)
     {
         printf("\nSua Vida: %d | Vida do Rat: %d\n", Player1.life, Rat.life);
