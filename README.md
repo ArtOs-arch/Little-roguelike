@@ -35,7 +35,7 @@ Conforme eu aprender coisas novas, partes do código serão melhoradas ou reescr
 - [ ] Sistema de atributos
 - [ ] Combate
 - [ ] Inventário
-- [ ] Salas aleatórias
+- [ ] Salas
 - [ ] Itens e equipamentos
 - [ ] Sistema de níveis
 
@@ -62,10 +62,6 @@ Conforme eu aprender coisas novas, partes do código serão melhoradas ou reescr
 
 O projeto ainda está em desenvolvimento.
 
-Cada commit representa um passo na minha evolução como um amante da programação.
+Cada commit representa um passo na minha evolução como um entusiasta da programação.
 
 ---
-
-## Licença
-
-Este projeto é apenas para fins de estudo.
